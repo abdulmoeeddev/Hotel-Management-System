@@ -49,10 +49,10 @@ namespace HotelBooking.Admin
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (txtRoomFloor.Text != "" && txtRoomNumber.Text != "" && txtSecurity.Text != "" && cmbxRoomType.Text != "")
+            if (txtRoomDesc.Text != "" && txtRoomNumber.Text != "" && txtSecurity.Text != "" && cmbxRoomType.Text != "")
             {
                 var connection = Configuration.Configuration.getInstance().getConnection();
-                string query = $"INSERT INTO Room VALUES({int.Parse(txtRoomFloor.Text)}, '{id}', '{txtSecurity.Text}', {int.Parse(txtRoomNumber.Text)}, '{image}')";
+                string query = $"INSERT INTO Room VALUES('{id}', '{txtSecurity.Text}', {int.Parse(txtRoomNumber.Text)}, '{image}', '{txtRoomDesc.Text}')";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Room Added Successfully");

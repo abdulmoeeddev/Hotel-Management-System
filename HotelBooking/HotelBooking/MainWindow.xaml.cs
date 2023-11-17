@@ -29,9 +29,11 @@ namespace HotelBooking
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            SignUp signUp = new SignUp();
-            signUp.haveAnAccount += new EventHandler(onHaveAnAccountClicked);
-            mainPanel.Content = signUp;
+            HomePage homePage = new HomePage();
+            mainPanel.Content = homePage;
+            //SignUp signUp = new SignUp();
+            //signUp.haveAnAccount += new EventHandler(onHaveAnAccountClicked);
+            //mainPanel.Content = signUp;
         }
 
         private void onHaveAnAccountClicked(object sender, EventArgs e)

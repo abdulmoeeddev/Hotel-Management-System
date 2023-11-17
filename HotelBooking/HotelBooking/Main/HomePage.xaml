@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="HotelBooking.Main.HomePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotelBooking.Main"
+             mc:Ignorable="d" 
+             d:DesignHeight="360" d:DesignWidth="800"
+             Background="White" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Start-->
+        <Image Name="img1" 
+            Grid.Row="2" Grid.Column="1"
+               Stretch="UniformToFill" 
+               Source="/Main/download.jpg" />
+        <TextBlock Grid.Row="3" Grid.Column="1"
+                   Name="lblType"
+                   Text="Room Type"
+                   FontSize="20"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="1"
+           Name="lblPrice"
+           Text="Price"
+           FontSize="20"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="3"
+           Name="lblDescription"
+           Text="All Description Related to Room Goes Here
+                   Whatever the length is all description wrapped
+                   here."
+                   TextAlignment="Justify"
+           TextWrapping="Wrap"
+           FontSize="10"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="3"
+               Name="lblf1"
+               Text="Facility01"
+               FontSize="20"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="3"
+               Name="lblf2"
+               Text="Facility02"
+               FontSize="20"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+        </TextBlock>
+        <!--End-->
+
+
+        <Image Name="img2" 
+            Grid.Row="2" Grid.Column="5"
+               Stretch="UniformToFill" Source="/Main/download (1).jpg" />
+        <TextBlock Grid.Row="3" Grid.Column="5"
+           Name="lblType2"
+           Text="Room Type"
+           FontSize="20"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="5"
+           Name="lblPrice2"
+           Text="Price"
+           FontSize="20"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center">
+         </TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="7"
+           Name="lblDescription2"
+           Text="All Description Related to Room Goes Here
+                   Whatever the length is all description wrapped
+                   here."
+                   TextAlignment="Justify"
+           TextWrapping="Wrap"
+           FontSize="10"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="7"
+               Name="lblf1_1"
+               Text="Facility01"
+               FontSize="20"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="7"
+               Name="lblf2_2"
+               Text="Facility02"
+               FontSize="20"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+        </TextBlock>
+    </Grid>
+</UserControl>
