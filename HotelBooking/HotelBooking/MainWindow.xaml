@@ -1,0 +1,36 @@
+﻿<Window x:Class="HotelBooking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelBooking"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="#FF6D0000">
+            <TextBlock Text="Hotel Booking System"
+                       Margin="10,0,0,0"
+                       TextAlignment="Left"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontWeight="Bold"
+                       FontSize="20"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <UserControl Name="mainPanel"></UserControl>
+        </Grid>
+        <Grid Grid.Row="2"
+              Background="#FF6D0000">
+            <TextBlock Text="Developed By Syed Hashir"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>
