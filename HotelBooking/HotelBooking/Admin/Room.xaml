@@ -115,6 +115,27 @@
             <ComboBox Name="cmbxRoomType" SelectionChanged="cmbxRoomType_SelectionChanged">
             </ComboBox>
         </Grid>
+
+        <Grid Grid.Row="5" Grid.Column="1">
+            <TextBlock Name="lblImage"
+              Foreground="#FF6D0000"
+              Text="Image"
+              FontSize="12"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Right"
+              Margin="0,0,10,0"></TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="5"
+              Grid.Column="2">
+            <Button
+                Name="btnUpload"
+                Content="Upload Image"
+                Foreground="White"
+                Background="#FF6D0000" Click="btnUpload_Click">
+                
+            </Button>
+        </Grid>
         <!--end-->
         <Grid Grid.Row="5"
              Grid.Column="5">

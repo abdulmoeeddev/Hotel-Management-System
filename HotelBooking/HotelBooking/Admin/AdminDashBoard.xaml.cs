@@ -49,5 +49,11 @@ namespace HotelBooking.Admin
             Product product = new Product();
             Dashboard.Content = product;
         }
+
+        private void btnStock_Click(object sender, RoutedEventArgs e)
+        {
+            Stock stock = new Stock();
+            Dashboard.Content = stock;
+        }
     }
 }

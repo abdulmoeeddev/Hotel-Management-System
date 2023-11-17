@@ -54,3 +54,5 @@ D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.csproj.CoreCompileInputs.cache
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.exe
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Stock.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Stock.baml
