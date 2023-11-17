@@ -63,6 +63,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Admin\Item\Product.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Item\Stock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin\Room.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +88,12 @@
     </Compile>
     <Compile Include="Admin\Item\Category.xaml.cs">
       <DependentUpon>Category.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Item\Product.xaml.cs">
+      <DependentUpon>Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Item\Stock.xaml.cs">
+      <DependentUpon>Stock.xaml</DependentUpon>
     </Compile>
     <Compile Include="Admin\Room.xaml.cs">
       <DependentUpon>Room.xaml</DependentUpon>

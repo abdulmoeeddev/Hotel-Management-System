@@ -57,6 +57,16 @@
                     Content="Category" Click="btnCategory_Click"
                     />
             </Grid>
+
+            <Grid Grid.Column="3">
+                <Button Name="btnProduct"
+                Foreground="White"
+                Background="#FF6D0000"
+                BorderThickness="3"
+                BorderBrush="White"
+                Content="Item" Click="btnProduct_Click"
+                />
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

@@ -43,5 +43,11 @@ namespace HotelBooking.Admin
             Category category = new Category();
             Dashboard.Content = category;
         }
+
+        private void btnProduct_Click(object sender, RoutedEventArgs e)
+        {
+            Product product = new Product();
+            Dashboard.Content = product;
+        }
     }
 }

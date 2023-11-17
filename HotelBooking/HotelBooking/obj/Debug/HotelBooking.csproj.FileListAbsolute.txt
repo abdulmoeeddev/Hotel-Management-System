@@ -25,3 +25,32 @@ D:\Hotel Booking System\HotelBooking\HotelBooking\obj\Debug\Admin\RoomType.g.cs
 D:\Hotel Booking System\HotelBooking\HotelBooking\obj\Debug\Admin\RoomType.baml
 D:\Hotel Booking System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Category.g.cs
 D:\Hotel Booking System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Category.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\bin\Debug\HotelBooking.exe.config
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\bin\Debug\HotelBooking.exe
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\bin\Debug\HotelBooking.pdb
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.csproj.AssemblyReference.cache
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\AdminDashBoard.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Category.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Product.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Room.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\RoomType.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\MainWindow.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Main\Login.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Main\SignUp.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\App.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking_MarkupCompile.cache
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking_MarkupCompile.lref
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\AdminDashBoard.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Category.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Room.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\RoomType.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\MainWindow.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Main\Login.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Main\SignUp.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Product.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.g.resources
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Properties.Resources.resources
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.csproj.GenerateResource.cache
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.csproj.CoreCompileInputs.cache
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.exe
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\HotelBooking.pdb
