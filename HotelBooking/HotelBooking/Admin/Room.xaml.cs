@@ -52,8 +52,10 @@ namespace HotelBooking.Admin
             if (txtRoomDesc.Text != "" && txtRoomNumber.Text != "" && txtSecurity.Text != "" && cmbxRoomType.Text != "")
             {
                 var connection = Configuration.Configuration.getInstance().getConnection();
-                string query = $"INSERT INTO Room VALUES('{id}', '{txtSecurity.Text}', {int.Parse(txtRoomNumber.Text)}, '{image}', '{txtRoomDesc.Text}')";
+                string query = $"INSERT INTO Room VALUES('{id}', '{txtSecurity.Text}', {int.Parse(txtRoomNumber.Text)}, '@Content', '{txtRoomDesc.Text}')";
                 SqlCommand command = new SqlCommand(query, connection);
+                SqlParameter param = command.Parameters.Add("@Content", SqlDbType.VarBinary);
+                param.Value = image;
                 command.ExecuteNonQuery();
                 MessageBox.Show("Room Added Successfully");
             }
@@ -79,7 +81,15 @@ namespace HotelBooking.Admin
                     BitmapImage image = new BitmapImage(new Uri(openFileDialog.FileName));
                     btnUpload.Content = openFileDialog.FileName;
                     byte[] imageData = File.ReadAllBytes(openFileDialog.FileName);
-                    return imageData;
+                    MessageBox.Show(openFileDialog.FileName);
+                    using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        BinaryReader br = new BinaryReader(fs);
+                        return br.ReadBytes((int)fs.Length);
+                    }
+
+
+                    //return imageData;
                 }
                 catch(Exception exp) {
                     MessageBox.Show(exp.Message);
@@ -91,7 +101,7 @@ namespace HotelBooking.Admin
         private void btnUpload_Click(object sender, RoutedEventArgs e)
         {
             image = UploadImage();
-            MessageBox.Show(image.ToString());
+            MessageBox.Show(image[0].ToString());
         }
         private BitmapImage imgFromStream(byte[] bytes)
         {

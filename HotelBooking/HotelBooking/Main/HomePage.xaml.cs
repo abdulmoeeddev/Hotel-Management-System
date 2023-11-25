@@ -24,28 +24,61 @@ namespace HotelBooking.Main
     /// </summary>
     public partial class HomePage : UserControl
     {
+        int carousel1 = 0;
+        int carousel2 = 1;
+        DataTable DT;
+        string userID = null;
         public HomePage()
         {
+            InitializeComponent();
+        }
+        public HomePage(string userID)
+        {
+            this.userID = userID;
             InitializeComponent();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             var connection = Configuration.Configuration.getInstance().getConnection();
-            string query = "SELECT * FROM Room JOIN RoomType ON Room.RoomTypeID = RoomType.ID";
+            string query = "SELECT * FROM Room JOIN RoomType ON Room.RoomTypeID = RoomType.ID ORDER BY RoomNumber";
             SqlCommand command = new SqlCommand(query,connection);
             SqlDataAdapter DA = new SqlDataAdapter(command);
-            DataTable DT = new DataTable();
+            DT = new DataTable();
             DA.Fill(DT);
+            UpdateCarousel();
+            
+        }
 
-            lblDescription.Text = DT.Rows[0][5].ToString();
-            lblDescription2.Text = DT.Rows[1][5].ToString();
+        private void UpdateCarousel()
+        {
+            if (carousel1 <= DT.Rows.Count)
+            {
+                byte[] byteArray = (byte[])(DT.Rows[carousel1][4]);
+                BitmapImage img = imgFromStream(byteArray);
+                img1.Source = img;
+                //img1.Source = new BitmapImage(new Uri(@"download (1).jpg", UriKind.Relative));
+                lblDescription.Text = DT.Rows[carousel1][5].ToString();
+                lblPrice.Text = "$" + DT.Rows[carousel1][8].ToString();
+                lblType.Text = DT.Rows[carousel1][7].ToString();
 
-            lblPrice.Text = "$" + DT.Rows[0][8].ToString();
-            lblPrice2.Text ="$" + DT.Rows[1][8].ToString();
-
-            lblType.Text = DT.Rows[0][7].ToString();
-            lblType2.Text = DT.Rows[1][7].ToString();
+                if(carousel2 < DT.Rows.Count)
+                {
+                    img2.Source = new BitmapImage(new Uri(@"/Main/download.jpg", UriKind.Relative));
+                    lblPrice2.Text = "$" + DT.Rows[carousel2][8].ToString();
+                    lblDescription2.Text = DT.Rows[carousel2][5].ToString();
+                    lblType2.Text = DT.Rows[carousel2][7].ToString();
+                    btnReserve_1.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    img2.Source = null;
+                    lblPrice2.Text = "";
+                    lblDescription2.Text = " ";
+                    lblType2.Text = "";
+                    btnReserve_1.Visibility = Visibility.Hidden;
+                }
+            }
         }
 
         private BitmapImage imgFromStream(byte[] bytes)
@@ -54,7 +87,6 @@ namespace HotelBooking.Main
             {
                 using (MemoryStream stream = new MemoryStream(bytes))
                 {
-                    stream.Position = 0;
                     BitmapImage bitmapImage = new BitmapImage();
                     bitmapImage.BeginInit();
                     bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
@@ -70,6 +102,27 @@ namespace HotelBooking.Main
                 return null;
             }
 
+        }
+
+        private void btnleft_Click(object sender, RoutedEventArgs e)
+        {
+            if(carousel1-1 >=0)
+            {
+                carousel1 = (carousel1-1);
+                carousel2 = (carousel2-1);
+                UpdateCarousel();
+            }
+
+        }
+
+        private void btnright_Click(object sender, RoutedEventArgs e)
+        {
+            if (carousel1 + 1 < DT.Rows.Count)
+            {
+                carousel1 = (carousel1 + 1);
+                carousel2 = (carousel2 + 1);
+                UpdateCarousel();
+            }
         }
     }
 }

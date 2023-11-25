@@ -32,8 +32,7 @@
         <!--Start-->
         <Image Name="img1" 
             Grid.Row="2" Grid.Column="1"
-               Stretch="UniformToFill" 
-               Source="/Main/download.jpg" />
+               Stretch="UniformToFill"  />
         <TextBlock Grid.Row="3" Grid.Column="1"
                    Name="lblType"
                    Text="Room Type"
@@ -82,7 +81,7 @@
 
         <Image Name="img2" 
             Grid.Row="2" Grid.Column="5"
-               Stretch="UniformToFill" Source="/Main/download (1).jpg" />
+               Stretch="UniformToFill" />
         <TextBlock Grid.Row="3" Grid.Column="5"
            Name="lblType2"
            Text="Room Type"
@@ -126,5 +125,58 @@
                VerticalAlignment="Center"
                HorizontalAlignment="Center">
         </TextBlock>
+
+        <Button Name="btnReserve_0"
+            Grid.Row="6"
+            Grid.Column="3"
+            Background="#FF6D0000"
+            Content="Reserve"
+            Foreground="White"
+            FontSize="15" Click="btnleft_Click"
+        
+            >
+
+        </Button>
+        <Button Name="btnReserve_1"
+            Grid.Row="6"
+            Grid.Column="7"
+            Background="#FF6D0000"
+            Content="Reserve"
+            Foreground="White"
+            FontSize="15" Click="btnright_Click"
+            >
+        </Button>
+
+        <Grid Grid.Column="7"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="btnleft"
+                    Background="#FF6D0000"
+                    Content="--L"
+                    Foreground="White"
+                    FontSize="15" Click="btnleft_Click"
+                    BorderBrush="Beige"
+                    BorderThickness="4"
+                    >
+
+             </Button>
+            <Button Name="btnright"
+                    Grid.Column="1"
+                    Background="#FF6D0000"
+                    Content="R--"
+                    Foreground="White"
+                    BorderBrush="Beige"
+                    BorderThickness="4"
+                    FontSize="15" Click="btnright_Click"
+                    >
+            </Button>
+
+            
+
+        </Grid>
     </Grid>
 </UserControl>
