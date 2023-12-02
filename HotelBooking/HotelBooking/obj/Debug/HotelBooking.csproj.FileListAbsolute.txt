@@ -58,3 +58,5 @@ D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\St
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Item\Stock.baml
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Main\HomePage.g.cs
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Main\HomePage.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Reservation\Reserve.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Reservation\Reserve.baml

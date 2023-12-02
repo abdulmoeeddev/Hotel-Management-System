@@ -24,6 +24,7 @@ namespace HotelBooking.Main
     {
         public event EventHandler createNewAccount;
         public event EventHandler openAdminDashboard;
+        public event EventHandler openHomePage;
         public Login()
         {
             InitializeComponent();
@@ -51,6 +52,10 @@ namespace HotelBooking.Main
                     if (DT.Rows[0][6].ToString() == "1")
                     {
                         openAdminDashboard?.Invoke(this, e);
+                    }
+                    if (DT.Rows[0][6].ToString() == "2")
+                    {
+                        openHomePage?.Invoke(DT.Rows[0][0].ToString(), e);
                     }
                 }
                 else

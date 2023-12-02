@@ -132,7 +132,7 @@
             Background="#FF6D0000"
             Content="Reserve"
             Foreground="White"
-            FontSize="15" Click="btnleft_Click"
+            FontSize="15" Click="btnReserve_0_Click"
         
             >
 
@@ -143,7 +143,7 @@
             Background="#FF6D0000"
             Content="Reserve"
             Foreground="White"
-            FontSize="15" Click="btnright_Click"
+            FontSize="15" 
             >
         </Button>
 

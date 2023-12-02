@@ -5,11 +5,221 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HotelBooking.Reservation"
              mc:Ignorable="d" 
-             d:DesignHeight="360" d:DesignWidth="800">
+             d:DesignHeight="360" d:DesignWidth="800"
+             Background="White" Loaded="UserControl_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            
             <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>  
+        </Grid.ColumnDefinitions>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!--Start-->
+            <Image Name="img1" 
+                Grid.Row="2" Grid.Column="1"
+                    Stretch="UniformToFill"  />
+            <TextBlock Grid.Row="3" Grid.Column="1"
+                Name="lblType"
+                Text="Room Type"
+                FontSize="15"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+            </TextBlock>
+
+            <TextBlock Grid.Row="4" Grid.Column="1"
+               Name="lblPrice"
+               Text="Price"
+               FontSize="15"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+            </TextBlock>
+
+            <TextBlock Grid.Row="2" Grid.Column="3"
+               Name="lblDescription"
+               Text="All Description Related to Room Goes Here
+               Whatever the length is all description wrapped
+               here."
+               TextAlignment="Justify"
+               TextWrapping="Wrap"
+               FontSize="8"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+            </TextBlock>
+
+            <TextBlock Grid.Row="3" Grid.Column="3"
+               Name="lblf1"
+               Text="Facility01"
+               FontSize="15"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+            </TextBlock>
+
+            <TextBlock Grid.Row="4" Grid.Column="3"
+               Name="lblf2"
+               Text="Facility02"
+               FontSize="15"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center">
+            </TextBlock>
+            <!--End-->
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.ColumnSpan="4"
+                       Text="Reserve Your Place"
+                       FontWeight="SemiBold"
+                       FontSize="25"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+            >
+            </TextBlock>
+
+            <!---Each Entity-->
+            <Grid Grid.Row="1" Grid.Column="0">
+                <TextBlock Name="lblName"
+                    Foreground="#FF6D0000"
+                    Text="Name"
+                    FontSize="12"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+
+                    ></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <TextBox Background="#FF6D0000"
+                    Opacity="1"
+                    Name="txtName" 
+                    SelectionBrush="#FF6D0000" 
+                    IsEnabled="False"
+                    Foreground="White">
+
+                </TextBox>
+            </Grid>
+            <!--end-->
+
+
+            <!---Each Entity-->
+            <Grid Grid.Row="1" Grid.Column="2">
+                <TextBlock Name="lblEmail"
+                    Foreground="#FF6D0000"
+                    Text="Email"
+                    FontSize="12"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+
+                    ></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="3">
+                <TextBox Background="#FF6D0000"
+                    Opacity="1"
+                    Name="txtEmail" 
+                    SelectionBrush="#FF6D0000" 
+                    IsEnabled="False"
+                    Foreground="White">
+
+                </TextBox>
+            </Grid>
+            <!--end-->
+
+            <!---Each Entity-->
+            <Grid Grid.Row="3" Grid.Column="0">
+                <TextBlock Name="lblStartDate"
+                    Foreground="#FF6D0000"
+                    Text="Start Date"
+                    FontSize="12"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                           ></TextBlock>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="1">
+                <DatePicker Name="StartDate"
+                            Background="#FF6D0000"
+                            ></DatePicker>
+            </Grid>
+            <!--end-->
+
+            <!---Each Entity-->
+            <Grid Grid.Row="3" Grid.Column="2">
+                <TextBlock Name="lblEndDate"
+                    Foreground="#FF6D0000"
+                    Text="End Date"
+                    FontSize="12"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                           ></TextBlock>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="3">
+                <DatePicker Name="EndDate"
+                    Background="#FF6D0000"
+                ></DatePicker>
+            </Grid>
+            <!--end-->
+            <Grid Grid.Row="5"
+                     Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name="btnReserve"
+                       Grid.Column="0"
+                       BorderThickness="3"
+                       Content="Reserve"
+                       Background="#FF6D0000"
+                       Foreground="White"
+                       BorderBrush="White" Click="btnReserve_Click"
+                   >
+
+                </Button>
+                <Button Name="btnBack"
+                   Grid.Column="1"
+                   BorderThickness="3"
+                   Content="Back"
+                   Background="#FF6D0000"
+                   Foreground="White"
+                   BorderBrush="White"
+                   >
+
+                </Button>
+            </Grid>
+
+
+        </Grid>
+        
     </Grid>
 </UserControl>

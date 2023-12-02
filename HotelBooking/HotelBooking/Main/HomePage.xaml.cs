@@ -1,10 +1,12 @@
-﻿using System;
+﻿using HotelBooking.Reservation;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,6 +30,8 @@ namespace HotelBooking.Main
         int carousel2 = 1;
         DataTable DT;
         string userID = null;
+        public event EventHandler openReservePage;
+        public event EventHandler openLoginPage;
         public HomePage()
         {
             InitializeComponent();
@@ -54,10 +58,10 @@ namespace HotelBooking.Main
         {
             if (carousel1 <= DT.Rows.Count)
             {
-                byte[] byteArray = (byte[])(DT.Rows[carousel1][4]);
-                BitmapImage img = imgFromStream(byteArray);
-                img1.Source = img;
-                //img1.Source = new BitmapImage(new Uri(@"download (1).jpg", UriKind.Relative));
+                //byte[] byteArray = (byte[])(DT.Rows[carousel1][4]);
+                //BitmapImage img = imgFromStream(byteArray);
+                //img1.Source = img;
+                img1.Source = new BitmapImage(new Uri(@"download (1).jpg", UriKind.Relative));
                 lblDescription.Text = DT.Rows[carousel1][5].ToString();
                 lblPrice.Text = "$" + DT.Rows[carousel1][8].ToString();
                 lblType.Text = DT.Rows[carousel1][7].ToString();
@@ -122,6 +126,20 @@ namespace HotelBooking.Main
                 carousel1 = (carousel1 + 1);
                 carousel2 = (carousel2 + 1);
                 UpdateCarousel();
+            }
+        }
+
+        private void btnReserve_0_Click(object sender, RoutedEventArgs e)
+        {
+            if(userID != null)
+            {
+                string roomID = DT.Rows[carousel1][0].ToString();
+                List<string> objects = new List<string>() { userID, roomID};
+                openReservePage?.Invoke(objects, EventArgs.Empty);
+            }
+            else
+            {
+                openLoginPage?.Invoke(null, EventArgs.Empty);
             }
         }
     }
