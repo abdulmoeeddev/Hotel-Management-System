@@ -32,6 +32,7 @@ namespace HotelBooking.Main
         string userID = null;
         public event EventHandler openReservePage;
         public event EventHandler openLoginPage;
+        public event EventHandler openDashBoard;
         public HomePage()
         {
             InitializeComponent();
@@ -51,7 +52,6 @@ namespace HotelBooking.Main
             DT = new DataTable();
             DA.Fill(DT);
             UpdateCarousel();
-            
         }
 
         private void UpdateCarousel()
@@ -141,6 +141,25 @@ namespace HotelBooking.Main
             {
                 openLoginPage?.Invoke(null, EventArgs.Empty);
             }
+        }
+
+        private void btnReserve_1_Click(object sender, RoutedEventArgs e)
+        {
+            if (userID != null)
+            {
+                string roomID = DT.Rows[carousel2][0].ToString();
+                List<string> objects = new List<string>() { userID, roomID };
+                openReservePage?.Invoke(objects, EventArgs.Empty);
+            }
+            else
+            {
+                openLoginPage?.Invoke(null, EventArgs.Empty);
+            }
+        }
+
+        private void btnDashboard_Click(object sender, RoutedEventArgs e)
+        {
+            openDashBoard?.Invoke(userID, EventArgs.Empty);
         }
     }
 }

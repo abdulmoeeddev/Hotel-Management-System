@@ -51,7 +51,7 @@ namespace HotelBooking.Main
 
                     if (DT.Rows[0][6].ToString() == "1")
                     {
-                        openAdminDashboard?.Invoke(this, e);
+                        openHomePage?.Invoke(DT.Rows[0][0].ToString(), e);
                     }
                     if (DT.Rows[0][6].ToString() == "2")
                     {

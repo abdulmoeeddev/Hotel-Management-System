@@ -6,9 +6,12 @@ FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Item\Product.xam
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Item\Stock.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Room.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\RoomType.xaml;;
+FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Customer\CustomerDashboard.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\MainWindow.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Main\HomePage.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Main\Login.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Main\SignUp.xaml;;
+FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Profile.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Reservation\Reserve.xaml;;
+FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Customer\CustomerRoomRequest.xaml;;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelBooking.Main;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,10 +21,14 @@ namespace HotelBooking.Reservation
     /// <summary>
     /// Interaction logic for Reserve.xaml
     /// </summary>
+    /// 
+
+
     public partial class Reserve : UserControl
     {
         string userId;
         string roomId;
+        public event EventHandler openHomePage;
         public Reserve(string userId, string roomId)
         {
             this.userId = userId;
@@ -59,12 +64,12 @@ namespace HotelBooking.Reservation
             if(StartDate.Text !="" && EndDate.Text!="")
             {
                 var connection = Configuration.Configuration.getInstance().getConnection();
-                string query = $"INSERT INTO Reservation VALUES('{userId}','{DateTime.Now.Date}')";
-                SqlCommand command = new SqlCommand(query , connection);
+
+                string query = $"INSERT INTO Reservation (UserId, DateReserved) VALUES('{userId}','{DateTime.Now.Date}')";
+                SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
 
                 query = "SELECT TOP 1 * FROM Reservation ORDER BY ReserveId DESC";
-                command = new SqlCommand(query , connection);
                 SqlDataAdapter DA = new SqlDataAdapter(command);
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
@@ -76,8 +81,14 @@ namespace HotelBooking.Reservation
                 query = $"UPDATE Room SET isReserved = 1 WHERE RoomId = '{roomId}'";
                 command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Reservation Added Successfully");
+
+                MessageBox.Show("Reservation Request Added Successfully");
             }
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            openHomePage?.Invoke(userId, EventArgs.Empty);   
         }
     }
 }

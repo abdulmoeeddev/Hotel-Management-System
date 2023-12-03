@@ -21,6 +21,15 @@
                        Foreground="White"
                        FontWeight="Bold"
                        FontSize="20"></TextBlock>
+
+            <Button Name="btnlogin"
+                Width="40"
+                HorizontalAlignment="Right" Click="btnlogin_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-customer-100.png" Stretch="UniformToFill"/>
+                </Button.Background>
+
+            </Button>
         </Grid>
         <Grid Grid.Row="1">
             <UserControl Name="mainPanel"></UserControl>
