@@ -66,3 +66,9 @@ D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Customer\Cust
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Profile.baml
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Customer\CustomerRoomRequest.g.cs
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Customer\CustomerRoomRequest.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\ApproveRequest.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Customer\Order.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\ApproveRequest.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Customer\Order.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\OrderDetails.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\OrderDetails.baml

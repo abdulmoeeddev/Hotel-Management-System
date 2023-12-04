@@ -21,7 +21,33 @@
                 <RowDefinition Height=".3*"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
             </Grid.RowDefinitions>
+
+
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnOrder"
+                    Grid.Column="3"
+                    Content="Order"
+                    Background="#FF6D0000"
+                    Foreground="White" Click="btnOrder_Click"
+                    >
+                </Button>
+
+                <Button x:Name="btnDelete"
+                    Grid.Column="0"
+                    Content="Delete"
+                    Background="#FF6D0000"
+                    Foreground="White" Click="btnDelete_Click"
+                    >
+                </Button>
+            </Grid>
 
 
             <Grid Grid.Row="1" Grid.Column="1">
@@ -49,11 +75,11 @@
                         ></TextBlock>
                     </Grid>
                     <Grid Grid.Row="1" Grid.Column="1">
-                    <ComboBox x:Name="cmbxproduct"
-                        Background="#FF6D0000"
-                            Opacity="1"
-                            Foreground="White">
-                    </ComboBox>
+                        <ComboBox x:Name="cmbxproduct"
+                            Background="#FF6D0000"
+                                Opacity="1"
+                                Foreground="White" SelectionChanged="cmbxproduct_SelectionChanged">
+                        </ComboBox>
                     </Grid>
                 <!--end-->
 
@@ -85,7 +111,6 @@
                         Opacity="1"
                         Name="txtQuantity" 
                         SelectionBrush="#FF6D0000" 
-                        IsEnabled="False"
                         Foreground="White">
 
                     </TextBox>
@@ -103,7 +128,7 @@
             </TextBlock>
 
             <Grid Grid.Row="2" Grid.Column="1">
-                <DataGrid Name="DGOrder" Loaded="DGPendingRequest_Loaded">
+                <DataGrid Name="DGOrder" >
 
                 </DataGrid>
             </Grid>

@@ -55,5 +55,17 @@ namespace HotelBooking.Admin
             Stock stock = new Stock();
             Dashboard.Content = stock;
         }
+
+        private void btnPending_Click(object sender, RoutedEventArgs e)
+        {
+            ApproveRequest approveRequest = new ApproveRequest();
+            Dashboard.Content = approveRequest;
+        }
+
+        private void btnOrderDetail_Click(object sender, RoutedEventArgs e)
+        {
+            OrderDetails orderDetails = new OrderDetails();
+            Dashboard.Content = orderDetails;
+        }
     }
 }

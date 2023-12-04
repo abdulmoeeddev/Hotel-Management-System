@@ -48,12 +48,12 @@
             </Grid>
 
             <Grid Grid.Column="2">
-                <Button Name="btnCategory"
+                <Button Name="btnOrder"
                 Foreground="White"
                 Background="#FF6D0000"
                 BorderThickness="3"
                 BorderBrush="White"
-                Content="Category"
+                Content="Order" Click="btnOrder_Click"
                 />
             </Grid>
 

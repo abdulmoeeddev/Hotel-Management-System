@@ -77,6 +77,26 @@
                     Content="Stock" Click="btnStock_Click"
                     />
             </Grid>
+
+            <Grid Grid.Column="4">
+                <Button Name="btnPending"
+                    Foreground="White"
+                    Background="#FF6D0000"
+                    BorderThickness="3"
+                    BorderBrush="White"
+                    Content="Pending Request" Click="btnPending_Click"
+                    />
+            </Grid>
+
+            <Grid Grid.Column="5">
+                <Button Name="btnOrderDetail"
+                    Foreground="White"
+                    Background="#FF6D0000"
+                    BorderThickness="3"
+                    BorderBrush="White"
+                    Content="Order Details" Click="btnOrderDetail_Click"
+                    />
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

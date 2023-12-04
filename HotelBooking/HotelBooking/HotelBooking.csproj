@@ -56,11 +56,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin\ApproveRequest.xaml.cs">
+      <DependentUpon>ApproveRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderDetails.xaml.cs">
+      <DependentUpon>OrderDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BL\Product.cs" />
     <Compile Include="Customer\CustomerDashboard.xaml.cs">
       <DependentUpon>CustomerDashboard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer\CustomerRoomRequest.xaml.cs">
       <DependentUpon>CustomerRoomRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Order.xaml.cs">
+      <DependentUpon>Order.xaml</DependentUpon>
     </Compile>
     <Compile Include="Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
@@ -69,6 +79,10 @@
       <DependentUpon>Reserve.xaml</DependentUpon>
     </Compile>
     <Page Include="Admin\AdminDashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\ApproveRequest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -81,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\Item\Stock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\OrderDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Customer\CustomerRoomRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Order.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

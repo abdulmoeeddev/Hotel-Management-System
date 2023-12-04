@@ -38,5 +38,11 @@ namespace HotelBooking.Customer
             CustomerRoomRequest roomRequest = new CustomerRoomRequest(userId);
             Dashboard.Content = roomRequest;
         }
+
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order(userId);
+            Dashboard.Content = order;  
+        }
     }
 }
