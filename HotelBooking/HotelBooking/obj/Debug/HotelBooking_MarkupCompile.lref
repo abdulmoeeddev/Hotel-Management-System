@@ -5,7 +5,9 @@ FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\ApproveRequest.x
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Item\Category.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Item\Product.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Item\Stock.xaml;;
+FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\OrderDetails.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Room.xaml;;
+FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\RoomList.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\RoomType.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Customer\CustomerDashboard.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Customer\CustomerRoomRequest.xaml;;
@@ -16,5 +18,5 @@ FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Main\Login.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Main\SignUp.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Profile.xaml;;
 FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Reservation\Reserve.xaml;;
-FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\OrderDetails.xaml;;
+FD:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\Admin\Facility.xaml;;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -70,6 +71,21 @@ namespace HotelBooking
             {
                 MessageBox.Show("Please Enter Name");
             }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var connection = Configuration.Configuration.getInstance().getConnection();
+            string query = $"SELECT * FROM SystemUsers WHERE UserId = {userId}";
+            SqlCommand command  = new SqlCommand(query , connection);
+            SqlDataAdapter DA = new SqlDataAdapter(command);
+            DataTable DT = new DataTable();
+            DA.Fill(DT);
+
+            txtName.Text = DT.Rows[0][1].ToString();
+            txtEmail.Text = DT.Rows[0][2].ToString();
+            txtPassword.Text = DT.Rows[0][5].ToString();
+            txtConfirmPassword.Text = DT.Rows[0][5].ToString();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +18,12 @@ using System.Windows.Shapes;
 namespace HotelBooking.Admin
 {
     /// <summary>
-    /// Interaction logic for OrderDetails.xaml
+    /// Interaction logic for RoomList.xaml
     /// </summary>
-    public partial class OrderDetails : UserControl
+    public partial class RoomList : UserControl
     {
         string userId;
-        public OrderDetails(string userId)
+        public RoomList(string userId)
         {
             InitializeComponent();
             this.userId = userId;
@@ -32,13 +32,13 @@ namespace HotelBooking.Admin
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             var connection = Configuration.Configuration.getInstance().getConnection();
-            string query = "SELECT * FROM OrderDetails JOIN Orders ON Orders.OrderId = OrderDetails.OrderId";
+            string query = "SELECT * FROM Room";
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataAdapter DA = new SqlDataAdapter(command);
             DataTable DT = new DataTable();
             DA.Fill(DT);
 
-            DGOrders.ItemsSource = DT.DefaultView;
+            DGRooms.ItemsSource = DT.DefaultView;
         }
     }
 }

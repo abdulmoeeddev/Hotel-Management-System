@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\App.xaml
-17914284401
+1962776899
 
-241761570315
-14209946504
-Admin\AdminDashBoard.xaml;Admin\ApproveRequest.xaml;Admin\Item\Category.xaml;Admin\Item\Product.xaml;Admin\Item\Stock.xaml;Admin\OrderDetails.xaml;Admin\Room.xaml;Admin\RoomType.xaml;Customer\CustomerDashboard.xaml;Customer\CustomerRoomRequest.xaml;Customer\Order.xaml;MainWindow.xaml;Main\HomePage.xaml;Main\Login.xaml;Main\SignUp.xaml;Profile.xaml;Reservation\Reserve.xaml;
+2618183117
+15767508510
+Admin\AdminDashBoard.xaml;Admin\ApproveRequest.xaml;Admin\Facility.xaml;Admin\Item\Category.xaml;Admin\Item\Product.xaml;Admin\Item\Stock.xaml;Admin\OrderDetails.xaml;Admin\Room.xaml;Admin\RoomList.xaml;Admin\RoomType.xaml;Customer\CustomerDashboard.xaml;Customer\CustomerRoomRequest.xaml;Customer\Order.xaml;MainWindow.xaml;Main\HomePage.xaml;Main\Login.xaml;Main\SignUp.xaml;Profile.xaml;Reservation\Reserve.xaml;
 
 True
 

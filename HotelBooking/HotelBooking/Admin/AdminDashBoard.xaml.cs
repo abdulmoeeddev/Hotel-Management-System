@@ -21,9 +21,11 @@ namespace HotelBooking.Admin
     /// </summary>
     public partial class AdminDashBoard : UserControl
     {
-        public AdminDashBoard()
+        string userId;
+        public AdminDashBoard(string userId)
         {
             InitializeComponent();
+            this.userId = userId;
         }
 
         private void btnRoomType_Click(object sender, RoutedEventArgs e)
@@ -64,8 +66,20 @@ namespace HotelBooking.Admin
 
         private void btnOrderDetail_Click(object sender, RoutedEventArgs e)
         {
-            OrderDetails orderDetails = new OrderDetails();
+            OrderDetails orderDetails = new OrderDetails(userId);
             Dashboard.Content = orderDetails;
+        }
+
+        private void btnRoomList_Click(object sender, RoutedEventArgs e)
+        {
+            RoomList roomList = new RoomList(userId);
+            Dashboard.Content = roomList;
+        }
+
+        private void btnFacility_Click(object sender, RoutedEventArgs e)
+        {
+            Facility facility = new Facility();
+            Dashboard.Content = facility;
         }
     }
 }

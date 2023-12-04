@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,8 +60,14 @@
     <Compile Include="Admin\ApproveRequest.xaml.cs">
       <DependentUpon>ApproveRequest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Facility.xaml.cs">
+      <DependentUpon>Facility.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin\OrderDetails.xaml.cs">
       <DependentUpon>OrderDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoomList.xaml.cs">
+      <DependentUpon>RoomList.xaml</DependentUpon>
     </Compile>
     <Compile Include="BL\Product.cs" />
     <Compile Include="Customer\CustomerDashboard.xaml.cs">
@@ -86,6 +93,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Admin\Facility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin\Item\Category.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\Room.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\RoomList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -220,6 +235,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons8-customer-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Main\icons8-back-button-96 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Main\icons8-forward-button-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-logout-rounded-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

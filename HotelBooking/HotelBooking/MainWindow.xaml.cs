@@ -13,6 +13,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -74,12 +75,13 @@ namespace HotelBooking
             HomePage homePage = new HomePage((string)sender);
             homePage.openLoginPage += new EventHandler(onHaveAnAccountClicked);
             homePage.openReservePage += new EventHandler(openReservePage);
+            btnlogout.Visibility = Visibility.Visible;
             mainPanel.Content = homePage;
         }
 
         private void openAdminDashBoard(object sender, EventArgs e)
         {
-            AdminDashBoard adminDashBoard = new AdminDashBoard();
+            AdminDashBoard adminDashBoard = new AdminDashBoard(userId);
             mainPanel.Content = adminDashBoard;
         }
 
@@ -109,7 +111,7 @@ namespace HotelBooking
 
                 if (roleId == "1")
                 {
-                    AdminDashBoard admin = new AdminDashBoard();
+                    AdminDashBoard admin = new AdminDashBoard(userId);
                     mainPanel.Content = admin;
                 }
                 else
@@ -118,6 +120,30 @@ namespace HotelBooking
                     mainPanel.Content = customer;
                 }
             }
+        }
+
+        private void btnlogout_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult result = System.Windows.Forms.MessageBox.Show("Are you sure you want to logout?", "Logging Out", (MessageBoxButtons)MessageBoxButton.YesNo);
+            if(result == System.Windows.Forms.DialogResult.Yes)
+            {
+                userId = null;
+                btnlogout.Visibility = Visibility.Hidden;
+                mainPanel.Content = new HomePage();
+            }
+        }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HomePage homePage;
+            if(userId != null)
+                homePage = new HomePage(userId);
+            else
+                homePage = new HomePage();
+
+            homePage.openLoginPage += new EventHandler(onHaveAnAccountClicked);
+            homePage.openReservePage += new EventHandler(openReservePage);
+            mainPanel.Content = homePage;
         }
     }
 }

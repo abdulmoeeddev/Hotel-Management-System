@@ -29,6 +29,15 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <Grid Grid.Column="3" Grid.ColumnSpan="4">
+            <TextBlock Text="A Place where you find your comfort"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20">
+                
+            </TextBlock>
+        </Grid>
         <!--Start-->
         <Image Name="img1" 
             Grid.Row="2" Grid.Column="1"
@@ -70,7 +79,7 @@
         </TextBlock>
 
         <TextBlock Grid.Row="4" Grid.Column="3"
-               Name="lblf2"
+               Name="lblf1_1"
                Text="Facility02"
                FontSize="20"
                VerticalAlignment="Center"
@@ -96,7 +105,7 @@
            FontSize="20"
            VerticalAlignment="Center"
            HorizontalAlignment="Center">
-         </TextBlock>
+        </TextBlock>
 
         <TextBlock Grid.Row="2" Grid.Column="7"
            Name="lblDescription2"
@@ -111,7 +120,7 @@
         </TextBlock>
 
         <TextBlock Grid.Row="3" Grid.Column="7"
-               Name="lblf1_1"
+               Name="lblf2"
                Text="Facility01"
                FontSize="20"
                VerticalAlignment="Center"
@@ -155,27 +164,29 @@
             </Grid.ColumnDefinitions>
 
             <Button Name="btnleft"
-                    Background="#FF6D0000"
-                    Content="--L"
                     Foreground="White"
                     FontSize="15" Click="btnleft_Click"
                     BorderBrush="Beige"
                     BorderThickness="4"
                     >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Main/icons8-back-button-96 (1).png" Stretch="Uniform" TileMode="None"/>
+                </Button.Background>
 
-             </Button>
+            </Button>
             <Button Name="btnright"
                     Grid.Column="1"
-                    Background="#FF6D0000"
-                    Content="R--"
                     Foreground="White"
                     BorderBrush="Beige"
                     BorderThickness="4"
                     FontSize="15" Click="btnright_Click"
                     >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Main/icons8-forward-button-96.png" Stretch="Uniform"/>
+                </Button.Background>
             </Button>
 
-            
+
 
         </Grid>
     </Grid>

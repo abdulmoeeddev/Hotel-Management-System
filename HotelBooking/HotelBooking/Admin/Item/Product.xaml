@@ -27,14 +27,14 @@
         </Grid.RowDefinitions>
 
         <TextBlock Name="lblTitle"
-   Text="Add Item"
-   Grid.Row="0"
-   Grid.Column="1"
-   Grid.ColumnSpan="3"
-   VerticalAlignment="Center"
-   HorizontalAlignment="Center"
-   FontSize="20"
-   FontWeight="Bold">
+           Text="Add Item"
+           Grid.Row="0"
+           Grid.Column="1"
+           Grid.ColumnSpan="3"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"
+           FontSize="20"
+           FontWeight="Bold">
 
         </TextBlock>
 

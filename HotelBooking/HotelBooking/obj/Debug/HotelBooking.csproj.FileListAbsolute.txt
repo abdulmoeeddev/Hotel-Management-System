@@ -72,3 +72,7 @@ D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Approve
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Customer\Order.baml
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\OrderDetails.g.cs
 D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\OrderDetails.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\RoomList.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\RoomList.baml
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Facility.g.cs
+D:\HMS\Hotel-Management-System\HotelBooking\HotelBooking\obj\Debug\Admin\Facility.baml

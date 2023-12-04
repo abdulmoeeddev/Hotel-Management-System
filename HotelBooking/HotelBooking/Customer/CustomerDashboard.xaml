@@ -21,10 +21,6 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
@@ -57,25 +53,7 @@
                 />
             </Grid>
 
-            <Grid Grid.Column="3">
-                <Button Name="btnProduct"
-            Foreground="White"
-            Background="#FF6D0000"
-            BorderThickness="3"
-            BorderBrush="White"
-            Content="Item"
-            />
-            </Grid>
-
-            <Grid Grid.Column="4">
-                <Button Name="btnStock"
-                Foreground="White"
-                Background="#FF6D0000"
-                BorderThickness="3"
-                BorderBrush="White"
-                Content="Stock"
-                />
-            </Grid>
+            
         </Grid>
     </Grid>
 </UserControl>

@@ -20,7 +20,7 @@
                        VerticalAlignment="Center"
                        Foreground="White"
                        FontWeight="Bold"
-                       FontSize="20"></TextBlock>
+                       FontSize="20" MouseDown="TextBlock_MouseDown"></TextBlock>
 
             <Button Name="btnlogin"
                 Width="40"
@@ -40,6 +40,16 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Foreground="White"></TextBlock>
+
+            <Button Name="btnlogout"
+                Width="40"
+                    Visibility="Hidden"
+                HorizontalAlignment="Right" Click="btnlogout_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-logout-rounded-64.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+            </Button>
         </Grid>
     </Grid>
 </Window>

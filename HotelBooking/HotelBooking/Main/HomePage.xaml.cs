@@ -51,28 +51,82 @@ namespace HotelBooking.Main
             SqlDataAdapter DA = new SqlDataAdapter(command);
             DT = new DataTable();
             DA.Fill(DT);
+
+
+
             UpdateCarousel();
         }
 
         private void UpdateCarousel()
         {
+            var connection = Configuration.Configuration.getInstance().getConnection();
+            
             if (carousel1 <= DT.Rows.Count)
             {
                 //byte[] byteArray = (byte[])(DT.Rows[carousel1][4]);
                 //BitmapImage img = imgFromStream(byteArray);
                 //img1.Source = img;
+                string query = $"SELECT * FROM Facilities WHERE RoomId = {DT.Rows[carousel1][0]}";
+                SqlCommand command = new SqlCommand(query ,connection);
+                SqlDataAdapter DA = new SqlDataAdapter(command );
+                DataTable D1 = new DataTable();
+                DA.Fill(D1);
+
+
                 img1.Source = new BitmapImage(new Uri(@"download (1).jpg", UriKind.Relative));
                 lblDescription.Text = DT.Rows[carousel1][5].ToString();
-                lblPrice.Text = "$" + DT.Rows[carousel1][8].ToString();
+                lblPrice.Text = "$" + DT.Rows[carousel1][9].ToString();
                 lblType.Text = DT.Rows[carousel1][7].ToString();
+                if (D1.Rows.Count != 0)
+                {
+                    lblf1.Text = D1.Rows[0][2].ToString() + " " + D1.Rows[0][1].ToString();
+                    if(D1.Rows.Count >= 2)
+                        lblf1_1.Text = D1.Rows[1][2].ToString() + " " + D1.Rows[1][1].ToString();
+                    else
+                    {
+                        lblf1_1.Text = "";
+                    }
+                }
+                else
+                {
+                    lblf1.Text = "";
+                    lblf1_1.Text = "";
+                    //lblf2.Text = "";
+                    //lblf2_2.Text = "";
+                }
 
-                if(carousel2 < DT.Rows.Count)
+                if (carousel2 < DT.Rows.Count)
                 {
                     img2.Source = new BitmapImage(new Uri(@"/Main/download.jpg", UriKind.Relative));
-                    lblPrice2.Text = "$" + DT.Rows[carousel2][8].ToString();
+                    query = $"SELECT * FROM Facilities WHERE RoomId = {DT.Rows[carousel2][0]}";
+                    command = new SqlCommand(query, connection);
+                    DA = new SqlDataAdapter(command);
+                    DataTable D2 = new DataTable();
+                    DA.Fill(D2);
+                    if (D2.Rows.Count != 0)
+                    {
+                        lblf2.Text = D2.Rows[0][2].ToString() + " " + D2.Rows[0][1].ToString();
+                        if (D2.Rows.Count >= 2)
+                            lblf2_2.Text = D2.Rows[1][2].ToString() + " " + D2.Rows[1][1].ToString();
+                        else
+                        {
+                            lblf2_2.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        lblf2.Text = "";
+                        lblf2_2.Text = "";
+                        //lblf2.Text = "";
+                        //lblf2_2.Text = "";
+                    }
+
+                    lblPrice2.Text = "$" + DT.Rows[carousel2][9].ToString();
                     lblDescription2.Text = DT.Rows[carousel2][5].ToString();
                     lblType2.Text = DT.Rows[carousel2][7].ToString();
                     btnReserve_1.Visibility = Visibility.Visible;
+                    lblf2.Visibility = Visibility.Visible;
+                    lblf2_2.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -81,6 +135,8 @@ namespace HotelBooking.Main
                     lblDescription2.Text = " ";
                     lblType2.Text = "";
                     btnReserve_1.Visibility = Visibility.Hidden;
+                    lblf2.Visibility = Visibility.Hidden;
+                    lblf2_2.Visibility = Visibility.Hidden;
                 }
             }
         }
